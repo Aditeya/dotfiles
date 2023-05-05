@@ -1,0 +1,97 @@
+# ███╗   ██╗ ██████╗███╗   ███╗██████╗  ██████╗ ██████╗ ██████╗ 
+# ████╗  ██║██╔════╝████╗ ████║██╔══██╗██╔════╝ ██╔══██╗██╔══██╗
+# ██╔██╗ ██║██║     ██╔████╔██║██████╔╝██║      ██████╔╝██████╔╝
+# ██║╚██╗██║██║     ██║╚██╔╝██║██╔═══╝ ██║      ██╔═══╝ ██╔═══╝ 
+# ██║ ╚████║╚██████╗██║ ╚═╝ ██║██║     ╚███████╗██║     ██║     
+# ╚═╝  ╚═══╝ ╚═════╝╚═╝     ╚═╝╚═╝       ╚═════╝╚═╝     ╚═╝       
+
+# Files
+mpd_music_dir = "~/Music"  
+lyrics_directory  = ~/.config/ncmpcpp/lyrics
+ncmpcpp_directory  = ~/.config/ncmpcpp
+mpd_host = "localhost"
+mpd_port = "6600"  
+mpd_connection_timeout = "5"  
+mpd_crossfade_time = "5"  
+
+#------Colors------
+colors_enabled = "yes"
+statusbar_color = "white"
+main_window_color = "blue"
+current_item_prefix = "$(blue)$r"
+current_item_suffix = "$/r$(end)"
+header_window_color = "blue"
+volume_color = "red"
+current_item_inactive_column_prefix = ""
+current_item_inactive_column_suffix = ""
+active_window_border = "blue"
+
+#------Formats------
+song_columns_list_format = "(4f)[red]{n} (35)[green]{t} (18)[blue]{a} (30)[green]{b} (5f)[blue]{y} (7f)[246]{l}"  
+song_list_format = "♫   $3%n$(end) $9 $3%a$(end) $(245)-$9 $(246)%t$9 $R{ $5%y$9}$(end)     $(246)%lq$(end)"
+#now_playing_prefix = "> "
+now_playing_prefix = "♫ "
+song_status_format = "$b $8%a $8•$3• $3%t $3•$5• $5%b $5•$2• $2%y" (bold)
+#song_status_format = "$8%a $8•$3• $3%t $3•$5• $5%b $5•$2• $2%y $2•$8• $8%g"   (regular)
+
+#unused
+alternative_header_first_line_format = "$0$aqqu$/a {$7%a - $9}{$5%t$9}|{$8%f$9} $0$atqq$/a$9"
+alternative_header_second_line_format = "{{$6%b$9}{ [$6%y$9]}}|{%D}"
+
+#------Playlist------
+message_delay_time = "1"
+playlist_disable_highlight_delay = "1" (0/1)
+playlist_show_remaining_time = "yes"
+
+#------Misc------
+display_bitrate = "yes"
+enable_window_title = "yes"
+follow_now_playing_lyrics = "yes"
+ignore_leading_the = "yes"
+empty_tag_marker = ""
+autocenter_mode = "yes"
+centered_cursor = "yes"
+default_place_to_search_in = "database"
+
+# Navigation
+cyclic_scrolling = "yes"
+header_text_scrolling = "yes"
+jump_to_now_playing_song_at_start = "yes"
+lines_scrolled = "2"
+
+# Other
+system_encoding = "utf-8"
+regular_expressions = "extended"
+
+# Selected tracks
+selected_item_prefix = "● "
+discard_colors_if_item_is_selected = "no"
+
+## Seeking ##
+incremental_seeking = "yes"
+seek_time = "1"
+
+## Visivility ##
+header_visibility = "yes"
+statusbar_visibility = "yes"
+titles_visibility = "yes"
+
+#------Display Modes------
+user_interface = "classic" (classic/alternative)
+playlist_display_mode = "columns" (classic/columns)
+browser_display_mode = "columns" (classic/columns)
+search_engine_display_mode = "columns" (classic/columns)
+
+#------Progress Bar------
+progressbar_look = "─╼-"
+progressbar_color = "blue"
+progressbar_elapsed_color = "white"
+
+#------Visualizer------
+visualizer_data_source = "/tmp/mpd.fifo"
+visualizer_output_name = "Visualizer feed"
+#buffer_time = "100000" # 100ms
+visualizer_type = "spectrum" (spectrum/wave)
+visualizer_in_stereo = "yes"
+visualizer_look = ●┃
+visualizer_color = blue, cyan, green, yellow, magenta, red

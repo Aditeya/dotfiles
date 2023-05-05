@@ -1,0 +1,7 @@
+customCommands:
+  - key: "C"
+    command: "gitz"
+    description: "commit with rcz+vim"
+    context: "files"
+    loadingText: "opening rcz commit tool"
+    subprocess: true

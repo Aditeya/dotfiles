@@ -1,0 +1,43 @@
+mappings:
+  MEMORY_1:
+    MACRO_1:
+      gamemode: 0
+      name: ''
+      string: A
+      type: key
+      value: [1, 30]
+    MACRO_2:
+      gamemode: 0
+      name: example-cut
+      string: command
+      type: command
+      value: [5, xscreensaver-command -activate]
+    MACRO_3:
+      gamemode: 0
+      name: ''
+      string:
+      - [N]
+      - [I]
+      - [C]
+      - [E]
+      type: macro
+      value:
+      - - [1, 49]
+      - - [1, 23]
+      - - [1, 46]
+      - - [1, 18]
+    MACRO_4:
+      gamemode: 0
+      name: ''
+      string: command
+      type: command
+      value: [5, dmenu-radio]
+    MACRO_5:
+      gamemode: 0
+      name: ''
+      string: command
+      type: command
+      value: [5, systemctl --user restart easyeffects]
+openRGB: {MEMORY_1: M1, MEMORY_2: M2, MEMORY_3: M3}
+settings: {minOnStart: true, retryCount: 5, showNotifications: false, usbDeviceID: 3,
+  usbTimeout: 1000}

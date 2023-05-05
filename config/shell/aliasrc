@@ -1,0 +1,31 @@
+#!/bin/sh
+
+alias \
+	ls="exa --icons --header --git" \
+	grep="grep --color=auto" \
+	grep="grep --colour=auto" \
+	egrep="egrep --colour=auto" \
+	fgrep="fgrep --colour=auto" \
+	diff="diff --color=auto"
+
+alias \
+	lf="lfrun" \
+	vim="nvim" \
+	s="sudo " \
+	sudo="sudo " \
+	d="doas " \
+	doas="doas " \
+	p="pacman" \
+	pp="powerpill"
+
+alias \
+	cp="cp -i" \
+	df="df -h" \
+	free="free -m" \
+	more="less" \
+	cal="cal -s"
+
+alias brave="brave --enable-features=VaapiVideoDecoder,VaapiVideoEncoder"
+alias super7z="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
+alias super-tar-zst="tar -I 'zstd -19' -cf"
+alias mouserestart="systemctl restart logid.service"

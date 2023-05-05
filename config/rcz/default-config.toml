@@ -1,0 +1,54 @@
+format = '''
+{type}{scope}: {emoji}{subject}
+{body}
+{footer}'''
+
+[[types]]
+description = 'A bug fix'
+value = 'fix'
+emoji = '🐛'
+
+[[types]]
+description = 'A new feature'
+value = 'feat'
+emoji = '✨'
+
+[[types]]
+description = 'Changes that introduces a breaking API change'
+value = 'BREAKING CHANGE'
+emoji = '💥'
+
+[[types]]
+description = 'build system or external dependencies'
+value = 'chore'
+emoji = '🛠️'
+
+[[types]]
+description = 'CI related changes'
+value = 'ci'
+emoji = '💫'
+
+[[types]]
+description = 'Documentation only changes'
+value = 'docs'
+emoji = '✏️'
+
+[[types]]
+description = 'Changes that do not affect the meaning of the code'
+value = 'style'
+emoji = '💄'
+
+[[types]]
+description = 'A code change that neither fixes a bug nor adds a feature'
+value = 'refactor'
+emoji = '🧹'
+
+[[types]]
+description = ' A code change that improves performance'
+value = 'perf'
+emoji = '🚄'
+
+[[types]]
+description = 'Adding or correcting tests'
+value = 'test'
+emoji = '🧪'
