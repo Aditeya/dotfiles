@@ -1,7 +1,13 @@
 [home.files]
-"home" = "~"
-"home/X" = "~"
+"home/misc" = "~"
+
+[Xorg.files]
+"home/Xorg" = "~"
+
+[bash.files]
 "home/bash" = "~"
+
+[zsh.files]
 "home/zsh" = "~"
 
 [basic.files]
