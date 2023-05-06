@@ -1,14 +1,76 @@
+# NOTE: $HOME squatter files
 [home.files]
 "home/misc" = "~"
 
 [Xorg.files]
 "home/Xorg" = "~"
 
+[bash]
+depends = ["shell"]
 [bash.files]
 "home/bash" = "~"
 
+[zsh]
+depends = ["shell"]
 [zsh.files]
 "home/zsh" = "~"
 
-[basic.files]
-config = "~/.config/"
+# NOTE: XDG_CONFIG
+[shell.files]
+"config/shell" = "~/.config/shell/"
+
+[bspwm]
+depends = ["Xorg", "sxhkd", "polybar", "picom", "redshift", "dunst", "programs"]
+
+[bspwm.files]
+"config/bspwm" = "~/.config/bspwm/"
+[sxhkd.files]
+"config/sxhkd" = "~/.config/sxhkd/"
+[polybar.files]
+"config/polybar" = "~/.config/polybar/"
+[picom.files]
+"config/picom" = "~/.config/picom/"
+[redshift.files]
+"config/redshift" = "~/.config/redshift/"
+[dunst.files]
+"config/dunst" = "~/.config/dunst/"
+
+[programs]
+depends = ["alacritty", "wezterm", "nvim", "music", "flameshot", "lazygit", "lf", "mpv", "nsxiv", "paru", "rcz", "zathura"]
+
+[alacritty]
+depends = ["zsh", "bash"]
+[alacritty.files]
+"config/alacritty" = "~/.config/alacritty/"
+
+[wezterm]
+depends = ["zsh", "bash"]
+[wezterm.files]
+"config/wezterm" = "~/.config/wezterm/"
+
+[nvim.files]
+"config/nvim" = "~/.config/nvim/"
+
+[music.files]
+"config/mpd" = "~/.config/mpd/"
+"config/ncmpcpp" = "~/.config/ncmpcpp/"
+
+[flameshot.files]
+"config/flameshot" = "~/.config/flameshot/"
+[lazygit.files]
+"config/lazygit" = "~/.config/lazygit/"
+[lf.files]
+"config/lf" = "~/.config/lf/"
+[mpv.files]
+"config/mpv" = "~/.config/mpv/"
+[nsxiv.files]
+"config/nsxiv" = "~/.config/nsxiv/"
+[paru.files]
+"config/paru" = "~/.config/paru/"
+[rcz.files]
+"config/rcz" = "~/.config/rcz/"
+[zathura.files]
+"config/zathura" = "~/.config/zathura/"
+
+[keyboard-center.files]
+"config/keyboard-center" = "~/.config/keyboard-center/"
