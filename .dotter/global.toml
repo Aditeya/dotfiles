@@ -30,10 +30,14 @@ depends = ["Xorg", "sxhkd", "polybar", "picom", "redshift", "dunst", "programs"]
 "config/polybar" = "~/.config/polybar/"
 [picom.files]
 "config/picom" = "~/.config/picom/"
-[redshift.files]
-"config/redshift" = "~/.config/redshift/"
 [dunst.files]
 "config/dunst" = "~/.config/dunst/"
+
+[redshift.files]
+"config/redshift" = "~/.config/redshift/"
+[redshift.variables]
+lat = "00.00000"
+lon = "00.00000"
 
 [programs]
 depends = ["alacritty", "wezterm", "nvim", "music", "flameshot", "lazygit", "lf", "mpv", "nsxiv", "paru", "rcz", "zathura"]
