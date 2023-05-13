@@ -15,12 +15,15 @@ depends = ["shell"]
 [zsh.files]
 "home/zsh" = "~"
 
+[scripts.files]
+"local/bin" = "~/.local/bin/"
+
 # NOTE: XDG_CONFIG
 [shell.files]
 "config/shell" = "~/.config/shell/"
 
 [bspwm]
-depends = ["Xorg", "sxhkd", "polybar", "picom", "redshift", "dunst", "programs"]
+depends = ["Xorg", "sxhkd", "polybar", "picom", "redshift", "dunst", "programs", "scripts"]
 
 [bspwm.files]
 "config/bspwm" = "~/.config/bspwm/"

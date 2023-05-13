@@ -1,0 +1,39 @@
+#!/bin/sh
+
+menu(){
+    printf "1. Minecraft\n"
+    printf "2. Brave\n"
+    printf "3. Steam\n"
+    printf "4. Music\n"
+    printf "5. Work\n"
+}
+
+main() {
+    choice=$(menu | dmenu -c -l 50 -p "Workflow")
+
+    case $(echo "$choice" | cut -d. -f1) in
+		1)
+				bspc desktop -f ^2
+				prismlauncher &
+			return
+			;;
+		2)
+				brave.sh
+			return
+			;;
+		3)
+				steam.sh
+			return
+			;;
+		4)
+				music.sh
+			return
+			;;
+		5)
+				work.sh
+			return
+			;;
+	esac
+}
+
+main

@@ -1,0 +1,65 @@
+#!/bin/sh
+
+audio_player="mpv --volume=60"
+
+notification(){
+    notify-send -i "audio-speakers" "now playing: $1 ☕️🎶"
+}
+
+menu(){
+    printf "1. TSF Jazz\n"
+    printf "2. ChillSky\n"
+    printf "3. Lofi\n"
+    printf "4. ChillHop\n"
+    printf "5. Box Lofi\n"
+    printf "6. The Bootleg Boy\n"
+    printf "7. Radio Spinner\n"
+    printf "8. SmoothChill\n"
+    printf "9. ClassicFM"
+}
+
+main() {
+    choice=$(menu | dmenu -c -l 50 -p "radiostation")
+    notification "$(echo "$choice" | cut -c4-)"
+
+    case $(echo "$choice" | cut -d. -f1) in
+		1)
+				$audio_player "https://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3"
+			return
+			;;
+		2)
+				$audio_player "https://lfhh.radioca.st/stream"
+			return
+			;;
+		3)
+				$audio_player "https://play.streamafrica.net/lofiradio"
+			return
+			;;
+		4)
+				$audio_player "http://stream.zeno.fm/fyn8eh3h5f8uv"
+			return
+			;;
+		5)
+				$audio_player "http://stream.zeno.fm/f3wvbbqmdg8uv"
+			return
+			;;
+		6)
+				$audio_player "http://stream.zeno.fm/0r0xa792kwzuv"
+			return
+			;;
+		7)
+				$audio_player "https://live.radiospinner.com/lofi-hip-hop-64"
+			return
+			;;
+		8)
+				$audio_player "https://media-ssl.musicradio.com/smoothchill"
+			return
+			;;
+		9)
+				$audio_player "https://media-ssl.musicradio.com/classicfm"
+			return
+			;;
+	esac
+}
+
+pkill -f http || main

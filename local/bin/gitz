@@ -1,0 +1,11 @@
+#!/bin/sh
+
+gitz_fn() {
+  if output="$(rcz)"; then
+    git commit -em "${output}"
+  else
+    echo "Err: faild to generate a commit message"
+  fi
+}
+
+gitz_fn
