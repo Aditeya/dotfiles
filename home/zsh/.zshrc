@@ -61,7 +61,7 @@ man() {
     command man "$@"
 }
 
-source ~/.config/aws_secrets
+#source ~/.config/aws_secrets
 
 colorscript random
 
