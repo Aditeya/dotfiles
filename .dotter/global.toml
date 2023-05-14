@@ -60,14 +60,14 @@ depends = ["zsh", "bash"]
 
 [music.files]
 "config/mpd" = "~/.config/mpd/"
-"config/ncmpcpp" = "~/.config/ncmpcpp/"
+"config/ncmpcpp" = { target = "~/.config/ncmpcpp/", type = "symbolic" }
 
 [flameshot.files]
 "config/flameshot" = "~/.config/flameshot/"
 [lazygit.files]
 "config/lazygit" = "~/.config/lazygit/"
 [lf.files]
-"config/lf" = "~/.config/lf/"
+"config/lf" = { target = "~/.config/lf/", type = "symbolic"}
 [mpv.files]
 "config/mpv" = "~/.config/mpv/"
 [nsxiv.files]
