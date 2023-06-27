@@ -31,7 +31,12 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- substitute current selected word
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- chmod current file to +x
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", opts)
+
+-- <enter> to ciw
+vim.keymap.set("n", "<cr>", "ciw", opts)
+vim.keymap.set('i', '<C-H>', '<C-W>', {noremap = true})
+vim.keymap.set("i", "<C-BS>", "<esc>cvb", opts)
 
 
 -- Better window navigation

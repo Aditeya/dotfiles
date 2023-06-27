@@ -14,8 +14,9 @@ return {
       TODO = { icon = " ", color = "info", alt = { "-- *" } },
       HACK = { icon = " ", color = "warning" },
       WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX", " !" } },
-      PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-      NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+      PERF = { icon = "󰅒 ", color = "info", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+      NOTE = { icon = "󰍨 ", color = "hint", alt = { "INFO" } },
+      TEST = { icon = "󰙨 ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
     },
     merge_keywords = true, -- when true, custom keywords will be merged with the defaults
     -- ! highlighting of the line containing the todo comment
@@ -35,10 +36,11 @@ return {
     -- list of hilight groups or use the hex color if hl not found as a fallback
     colors = {
       error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
-      warning = { "DiagnosticWarning", "WarningMsg", "#FBBF24" },
+      warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
       info = { "DiagnosticInfo", "#2563EB" },
       hint = { "DiagnosticHint", "#10B981" },
       default = { "Identifier", "#7C3AED" },
+      test = { "Identifier", "#FF00FF" }
     },
     search = {
       command = "rg",

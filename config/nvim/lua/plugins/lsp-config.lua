@@ -10,12 +10,12 @@ return {
     mason_lspconfig.setup({
       ensure_installed = {
         "lua_ls",
-        "angularls",
-        "tsserver",
-        "emmet_ls",
-        "html",
-        "cssls",
-        "rust_analyzer"
+        -- "angularls",
+        -- "tsserver",
+        -- "emmet_ls",
+        -- "html",
+        -- "cssls",
+        -- "rust_analyzer"
       },
       automatic_installation = true,
     })
@@ -41,27 +41,68 @@ return {
       -- vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
     end
 
+    local function setup_rusttools()
+      local install_root_dir = vim.fn.stdpath "data" .. "/mason"
+      local extension_path = install_root_dir .. "/packages/codelldb/extension/"
+      local codelldb_path = extension_path .. "adapter/codelldb"
+      local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
+      local rt = require("rust-tools")
+      rt.setup({
+        server = {
+          on_attach = function(_, bufnr)
+            on_attach(_, bufnr)
+            require("dap")
+            require("dapui")
+            -- Hover actions
+            vim.keymap.set("n", "K", rt.hover_actions.hover_actions, { buffer = bufnr })
+            -- Code action groups
+            vim.keymap.set("n", "<leader>ga", rt.code_action_group.code_action_group, { buffer = bufnr })
+          end,
+          flags = {
+            debounce_text_changes = 150,
+          },
+          settings = {
+            ["rust-analyzer"] = {
+              checkOnSave = {
+                enable = true,
+                command = "clippy",
+              },
+              cargo = {
+                allFeatures = true,
+              },
+            },
+          },
+        },
+        dap = {
+          adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
+        },
+      })
+    end
+
+
     local lspconfig = require("lspconfig")
     mason_lspconfig.setup_handlers({
       function (server_name)
         lspconfig[server_name].setup({ on_attach = on_attach, capabilities = capabilities })
       end,
       ['rust_analyzer'] = function ()
-        lspconfig.rust_analyzer.setup({
-          on_attach = on_attach,
-          capabilities = capabilities,
-          settings = {
-            ['rust-analyzer'] = {
-              check = {
-                allFeatures = true,
-                overrideCommand = {
-                  'cargo', 'clippy', '--workspace', '--message-format=json',
-                  '--all-targets', '--all-features'
-                }
-              }
-            }
-          }
-        })
+        setup_rusttools()
+
+        -- lspconfig.rust_analyzer.setup({
+        --   on_attach = on_attach,
+        --   capabilities = capabilities,
+        --   settings = {
+        --     ['rust-analyzer'] = {
+        --       check = {
+        --         allFeatures = true,
+        --         overrideCommand = {
+        --           'cargo', 'clippy', '--workspace', '--message-format=json',
+        --           '--all-targets', '--all-features'
+        --         }
+        --       }
+        --     }
+        --   }
+        -- })
       end,
       ['lua_ls'] = function ()
         lspconfig.lua_ls.setup({

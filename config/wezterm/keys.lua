@@ -53,4 +53,9 @@ return {
 		mods = 'CTRL|SHIFT',
 		action = w.action.EmitEvent('toggle-opacity'),
 	},
+	{
+		key = 'F11',
+		mods = '',
+		action = w.action.ToggleFullScreen,
+	},
 };

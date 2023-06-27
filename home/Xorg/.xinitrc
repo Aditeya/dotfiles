@@ -4,7 +4,7 @@
 #
 # Executed by startx (run your window manager from here)
 
-lightson+ -d 2 &
+#lightson+ -d 2 &
 xset -dpms
 xset s noblank
 
@@ -42,6 +42,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
+export DISPLAY=:0
 get_session(){
 	local dbus_args=(--sh-syntax --exit-with-session)
 	case "$SESSION" in

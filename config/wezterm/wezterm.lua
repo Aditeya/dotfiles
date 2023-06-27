@@ -1,8 +1,8 @@
-local wezterm = require('wezterm')
+-- local wezterm = require('wezterm')
 local fonts = require('font');
 local keys = require('keys');
 
-local gpus = wezterm.gui.enumerate_gpus()
+-- local gpus = wezterm.gui.enumerate_gpus()
 
 local padding = '0px'
 local window_padding = {
@@ -15,8 +15,9 @@ local window_padding = {
 return {
   keys = keys,
 
-  webgpu_preferred_adapter = gpus[1],
-  front_end = 'WebGpu',
+  -- NOTE: doesn't work on all devices
+  -- front_end = 'WebGpu',
+  -- webgpu_preferred_adapter = gpus[0],
 
   default_prog = { '/usr/bin/zsh', '-l' },
   adjust_window_size_when_changing_font_size = false,
@@ -24,7 +25,7 @@ return {
   -- font_locator = 'ConfigDirsOnly',
   -- freetype_load_flags = 'NO_HINTING',
   font_dirs = { 'fonts' },
-  font_size = 8,
+  font_size = 14,
   font = fonts.font,
   font_rules = fonts.font_rules,
 

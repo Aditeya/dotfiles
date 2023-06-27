@@ -8,11 +8,9 @@ remaps
 clipmenud & 
 fcitx -d &
 xsetroot -cursor_name Bibata-Original-Classic
-nitrogen --restore &
-picom &
+#nitrogen --restore &
+#picom &
 xscreensaver -no-splash &
 xset s off -dpms &
 lightson+ -d 2 &
 redshift-gtk & # started here becuz systemctl cmd won't work properly
-keyboard-center --background-mode &
-corectrl &
