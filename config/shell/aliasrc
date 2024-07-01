@@ -11,6 +11,7 @@ alias \
 alias \
 	lf="lfrun" \
 	vim="nvim" \
+	hx="helix" \
 	s="sudo " \
 	sudo="sudo " \
 	d="doas " \
@@ -29,3 +30,5 @@ alias \
 alias super7z="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
 alias super-tar-zst="tar -I 'zstd -19' -cf"
 alias mouserestart="systemctl restart logid.service"
+alias lf="yazi"
+alias sl="sl -aecwl4"

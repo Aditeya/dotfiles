@@ -66,3 +66,5 @@ man() {
 colorscript random
 
 eval "$(starship init zsh)"
+eval "$(atuin init zsh)"
+eval "$(zoxide init --cmd cd zsh)"

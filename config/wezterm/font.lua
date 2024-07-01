@@ -50,4 +50,5 @@ local font_rules = {
 return {
 	font = font,
 	font_rules = font_rules,
+  freetype_load_target = "HorizontalLcd",
 }

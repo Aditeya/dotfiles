@@ -38,6 +38,8 @@ vim.keymap.set("n", "<cr>", "ciw", opts)
 vim.keymap.set('i', '<C-H>', '<C-W>', {noremap = true})
 vim.keymap.set("i", "<C-BS>", "<esc>cvb", opts)
 
+-- <shift> + y to copy line without newline
+vim.keymap.set("n", "Y", "0yg_", opts)
 
 -- Better window navigation
 -- vim.keymap.set('n', '<C-h>', '<C-w>h', opts)

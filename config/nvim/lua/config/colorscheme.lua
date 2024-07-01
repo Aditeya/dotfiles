@@ -13,12 +13,13 @@ local is_neovide = vim.fn.exists("g:neovide") ~= 0
 if is_neovide then
   vim.g.nord_disable_background = false
   vim.g.nord_cursorline_transparent = false
-else
-  vim.cmd([[
-    hi Normal guibg=NONE ctermbg=NONE
-    hi Normal ctermbg=NONE guibg=NONE
-    hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
-  ]])
+  require('tokyonight').setup({ style = "night", transparent = true })
+-- else
+  -- vim.cmd([[
+  --   hi Normal guibg=NONE ctermbg=NONE
+  --   hi Normal ctermbg=NONE guibg=NONE
+  --   hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+  -- ]])
 end
 
 -- vim.cmd([[colorscheme nord]])
@@ -28,4 +29,5 @@ end
 --   end
 -- end
 
+-- Also check transparency.lua
 vim.cmd([[colorscheme tokyonight-night]])

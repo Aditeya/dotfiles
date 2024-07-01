@@ -33,7 +33,8 @@ vim.opt.cursorcolumn = true
 
 -- Mouse & GUI settings
 vim.opt.mouse = 'a'
-vim.opt.guifont = { 'Iosevka Term Slab,Noto Color Emoji', ':h8.5' }
+-- vim.opt.guifont = { 'Iosevka Term Slab,Noto Color Emoji', ':h8.5' }
+vim.opt.guifont = { 'Iosevka Term Slab,Noto Color Emoji', ':h16' }
 
 -- UFO Fold settings
 vim.opt.foldlevel = 999

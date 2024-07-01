@@ -12,6 +12,11 @@ return {
   init = function()
     local telescope = require('telescope')
     telescope.setup {
+      pickers = {
+        find_files = {
+          follow = true
+        }
+      },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown({})

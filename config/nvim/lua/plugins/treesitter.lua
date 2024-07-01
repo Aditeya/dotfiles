@@ -1,7 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   dependencies = {
-    "mrjones2014/nvim-ts-rainbow",
     { "elgiano/nvim-treesitter-angular", branch = "topic/jsx-fix" }
   },
   version = false, -- last release is way too old and doesn't work on Windows
@@ -39,14 +38,6 @@ return {
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
-    rainbow = {
-      enable = true,
-      -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-      extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-      max_file_lines = nil, -- Do not enable for files with more than n lines, int
-      -- colors = {}, -- table of hex strings
-      -- termcolors = {} -- table of colour name strings
-    }
   },
   config = function(_, opts)
     require("nvim-treesitter.configs").setup(opts)
