@@ -12,6 +12,14 @@ return {
   init = function()
     local telescope = require('telescope')
     telescope.setup {
+      defaults = {
+        border = false,
+        -- borderchars = {
+        --   prompt  = {'─', '│', '─', '│', '┌', '┐', '┘', '└' };
+        --   results = {'─', '│', '─', '│', '┌', '┐', '┘', '└' };
+        --   preview = {'─', '│', '─', '│', '┌', '┐', '┘', '└' };
+        -- }
+      },
       pickers = {
         find_files = {
           follow = true

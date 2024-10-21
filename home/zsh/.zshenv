@@ -2,7 +2,7 @@ typeset -U PATH path
 
 #Default Apps
 export PATH=$PATH:$HOME/.cargo/bin/
-export BROWSER="brave"
+export BROWSER="firefox"
 export EDITOR="nvim"
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 export READER="zathura"

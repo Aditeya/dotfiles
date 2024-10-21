@@ -5,7 +5,7 @@ return {
   {
     'AlexvZyl/nordic.nvim',
     opts = {
-      transparent_bg = true,
+      transparent = true,
       nordic = {
         reduced_blue = false,
       }

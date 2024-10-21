@@ -9,7 +9,7 @@ return {
   cmd = "Neotree",
   keys = {
     { "<leader>fe", "<cmd>Neotree toggle<CR>", desc = "Explorer NeoTree (cwd)" },
-    { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (cwd)", remap = true },
+    -- { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (cwd)", remap = true },
   },
   opts = {
     filesystem = {

@@ -69,5 +69,5 @@ get_session(){
 }
 
 
-exec "/usr/bin/polkit-dumb-agent"
+# exec "/usr/bin/polkit-dumb-agent"
 exec $(get_session)

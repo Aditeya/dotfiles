@@ -1,14 +1,14 @@
+vim.o.timeout = true
+vim.o.timeoutlen = 500
+
 return {
   "folke/which-key.nvim",
-  config = function ()
-    vim.o.timeout = true
-    vim.o.timeoutlen = 500
-
-    local wk = require("which-key")
-    wk.setup({})
-
-    wk.register({
-      f = { name = 'Search' },
-    }, { prefix = '<leader>' })
-  end
+  dependencies = {
+    "echasnovski/mini.icons",
+    "nvim-tree/nvim-web-devicons"
+  },
+  event = "VeryLazy",
+  keys = {
+    { "<leader>f", group = "Search"},
+  },
 }
